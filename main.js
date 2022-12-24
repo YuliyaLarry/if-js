@@ -5,6 +5,8 @@ console.log(user);
 // yuliya;
 
 let test = 1
+test = Boolean(test);
+console.log(test)
 test ++
 test += 1
 test -= 1
