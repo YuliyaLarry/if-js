@@ -4,35 +4,84 @@ user = student;
 console.log(user);
 // yuliya;
 
-let test = 1
+let test = 1;
 test = Boolean(test);
-console.log(test)
-test ++
-test += 1
-test -= 1
+console.log(test);
+test++;
+test += 1;
+test -= 1;
 
-console.log(test)
+console.log(test);
 
-const number = [2, 3, 5, 8]
+const number = [2, 3, 5, 8];
 let res = 1;
-for (let i = 0; i < number.length; i++){
-  res = res * number[i]
+for (let i = 0; i < number.length; i++) {
+  res = res * number[i];
 }
 
-console.log(res)
+console.log(res);
 
 let num = [2, 5, 8, 15, 0, 6, 20, 3];
 
 for (let i = 0; i < num.length; i++) {
   if (num[i] > 5 && num[i] < 10) {
-    console.log(num[i])
+    console.log(num[i]);
   }
 }
 
-const massive = [2, 5, 8, 15, 0, 6, 20, 3]
+const array = [2, 5, 8, 15, 0, 6, 20, 3];
 
-for (let i = 0; i < massive.length; i++){
-  if (massive[i] % 2 == 0){
-    console.log(massive[i])
+for (let i = 0; i < array.length; i++) {
+  if (array[i] % 2 === 0) {
+    console.log(array[i]);
   }
 }
+
+// lesson 3
+
+function palindrome(str) {
+  for (let i = 0; i < str.length / 2; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(palindrome("шалаш"));
+
+function min1(a, b) {
+  if (a > b) {
+    return b;
+  } else {
+    return a;
+  }
+}
+
+function min2(a, b) {
+  return a < b ? a : b;
+}
+
+function max1(a, y) {
+  if (a > y) {
+    return a;
+  } else {
+    return y;
+  }
+}
+
+function max2(a, y) {
+  return a > y ? a : y;
+}
+
+const numbers = [20, 15, 8, 9, 0, 6, 50, 3, 27, 100];
+replace(numbers);
+function replace(array) {
+  const result = [];
+  for (let i = 0; i < array.length; i++) {
+    result.push(array[i] !== 0 ? array[i] : 'zero');
+  }
+  return result;
+}
+
+console.log(replace(numbers));
