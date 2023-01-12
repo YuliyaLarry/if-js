@@ -74,14 +74,14 @@ function max2(a, y) {
   return a > y ? a : y;
 }
 
-const numbers = [20, 15, 8, 9, 0, 6, 50, 3, 27, 100];
-replace(numbers);
-function replace(array) {
-  const result = [];
-  for (let i = 0; i < array.length; i++) {
-    result.push(array[i] !== 0 ? array[i] : 'zero');
-  }
-  return result;
-}
+const numbers = [20, 15, 8, 9, 0, 6, 50, 3, 27, 100],
+  newstr = numbers.replace(/0/g, "zero"); // replace(numbers);
+// function replace(array) {
+//   const result = [];
+//   for (let i = 0; i < array.length; i++) {
+//     result.push(array[i] !== 0 ? array[i] : 'zero');
+//   }
+//   return result;
+// }
 
-console.log(replace(numbers));
+console.log(newstr);
