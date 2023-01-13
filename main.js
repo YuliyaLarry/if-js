@@ -16,7 +16,7 @@ console.log(test);
 const number = [2, 3, 5, 8];
 let res = 1;
 for (let i = 0; i < number.length; i++) {
-  res = res * number[i];
+  res *= number[i];
 }
 
 console.log(res);
@@ -53,31 +53,23 @@ console.log(palindrome("шалаш"));
 function min1(a, b) {
   if (a > b) {
     return b;
-  } else {
-    return a;
   }
+    return a;
 }
 
-function min2(a, b) {
-  return a < b ? a : b;
-}
+const min2 = (a, b) => a < b ? a : b;
 
 function max1(a, y) {
   if (a > y) {
     return a;
-  } else {
-    return y;
   }
+  return y;
 }
 
-function max2(a, y) {
-  return a > y ? a : y;
-}
+const max2 = (a, y) => a > y ? a : y;
 
 const numbers = [20, 15, 8, 9, 0, 6, 50, 3, 27, 100]
   const replaceZero = (array) => {
-  // const newArray = array.join().replace(/0/g, "zero").split(',')
-  // console.log(newArray);
     const newArray = [...array]
     for (let i = 0; i < newArray.length; i++) {
       if (String(newArray[i]).includes('0')) {
