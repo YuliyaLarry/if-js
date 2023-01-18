@@ -54,10 +54,10 @@ function min1(a, b) {
   if (a > b) {
     return b;
   }
-    return a;
+  return a;
 }
 
-const min2 = (a, b) => a < b ? a : b;
+const min2 = (a, b) => (a < b ? a : b);
 
 function max1(a, y) {
   if (a > y) {
@@ -66,18 +66,18 @@ function max1(a, y) {
   return y;
 }
 
-const max2 = (a, y) => a > y ? a : y;
+const max2 = (a, y) => (a > y ? a : y);
 
-const numbers = [20, 15, 8, 9, 0, 6, 50, 3, 27, 100]
-  const replaceZero = (array) => {
-    const newArray = [...array]
-    for (let i = 0; i < newArray.length; i++) {
-      if (String(newArray[i]).includes('0')) {
-        newArray[i] = String(newArray[i]).replace(/0/g, 'zero')
-      }
+const numbers = [20, 15, 8, 9, 0, 6, 50, 3, 27, 100];
+
+const replaceZero = (array) => {
+  const newArray = [...array];
+  for (let i = 0; i < newArray.length; i++) {
+    if (String(newArray[i]).includes("0")) {
+      newArray[i] = String(newArray[i]).replace(/0/g, "zero");
     }
-    console.log(newArray)
-}
-replaceZero(numbers)
+  }
+  console.log(newArray);
+};
 
-
+replaceZero(numbers);
